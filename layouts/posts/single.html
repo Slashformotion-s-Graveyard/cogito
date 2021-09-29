@@ -32,20 +32,13 @@
         </div>
         {{ $showReadTime := .Site.Params.showReadTime | default false }}
         {{if $showReadTime}}
-        <div class="article-read-time">
-          <i class="far fa-clock"></i>
           {{ $readTime := math.Round (div (countwords .Content) 220.0) }}
-          {{ $readTime }} minute read
-        </div>
-        {{ end }}
-        {{ if gt .Params.categories 0 }}
-        <div class="article-category">
-            <i class="fas fa-archive"></i>
-            {{ range $index, $value := .Params.categories }}
-            {{ if gt $index 0 }} {{ print ", " }} {{ end }}
-            <a class="category-link" href="{{ "/categories/" | relLangURL }}{{ $value | urlize }}">{{ $value }}</a>
-            {{ end }}
-        </div>
+          {{ if gt $readTime 2 }} {{/*  fixes issue#1  */}}
+          <div class="article-read-time">
+            <i class="far fa-clock"></i>
+            {{ $readTime }} minute read
+          </div>
+          {{ end }}
         {{ end }}
         {{ if gt .Params.tags 0 }}
         <div class="article-tag">

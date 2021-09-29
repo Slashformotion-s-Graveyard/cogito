@@ -1,12 +1,14 @@
-baseURL = "https://example.com"
+# remove this line
+themesDir = "../.."
+
 languageCode = "en-us"
-title = "Cactus theme example"
-theme = "cactus"
-copyright = "You" # cactus will use title if copyright is not set
-disqusShortname = "example" # Used when comments is enabled. Cactus will use site title if not set
+title = "Cogito theme example"
+theme = "cogito"
+copyright = "You" # cogito will use title if copyright is not set
+disqusShortname = "example" # Used when comments is enabled. Cagito will use site title if not set
 # googleAnalytics = "UA-1234-5"
-
-
+baseURL = "https://slashformotion.github.io/cogito/"
+mathjax = true
 # summaryLength = 2
 
 # Main menu which appears below site header.
@@ -31,6 +33,9 @@ url = "/about"
 weight = 4
 
 [markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true # make the shortcodes work
   [markup.tableOfContents]
     endLevel = 4
     ordered = false
@@ -58,7 +63,7 @@ weight = 4
   mainSection = "posts" # your main section
   showAllPostsOnHomePage = false # default
   postsOnHomePage = 5 # this option will be ignored if showAllPostsOnHomePage is set to true
-  tagsOverview = true # show tags overview by default.
+  tagsOverview = false # show tags overview by default.
   showProjectsList = true # show projects list by default (if projects data file exists).
   projectsUrl = "https://github.com/gohugoio" # title link for projects list
 
@@ -70,16 +75,8 @@ weight = 4
   showReadTime = true # default
 
   [params.comments]
-    enabled = true # default
-    engine = "cactus_comments" # only disqus, utterances, and cactus_comments is supported
-    [params.comments.utterances]
-      repo = "<github_username>/<github_reponame>"
-      label = "hugo-site-name" # you can use however you want to label your name in your repo's issues
-      theme = "github-light"
-    [params.comments.cactuscomments]
-      siteName = "your_cactus_comments_sitename" # see https://cactus.chat/ on how to register your site name
-      #serverUrl = "" # Defaults to https://matrix.cactus.chat:8448 (Cactus Chat public server)
-      #serverName = "" # Defaults to cactus.chat
+    enabled = false # default
+    engine = "disqus" # more supported engines will be added.
 
   # the value of name should be an valid font awesome icon name (brands type)
   # https://fontawesome.com/icons?d=gallery&s=brands

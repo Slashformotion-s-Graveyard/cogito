@@ -1,20 +1,20 @@
-name = "Cactus"
+name = "cogito"
 license = "MIT"
-licenselink = "https://github.com/monkeyWzr/hugo-theme-cactus/blob/master/LICENSE"
-description = "A clean, responsive hugo theme for personal blog. Forked from hexo theme cactus created by @probberechts."
-homepage = "https://github.com/monkeyWzr/hugo-theme-cactus"
-demosite = "https://www.takuzen.me/hugo-theme-cactus/"
-tags = ["blog", "responsive", "clean"]
+licenselink = "https://github.com/slashformotion/cogito/blob/master/LICENSE"
+description = "A hackable hugo theme for personal blog. Forked from cactus]created by @monkeyWzr."
+homepage = "https://github.com/slashformotion/cogito"
+demosite = "https://slashformotion.github.io/cogito/"
+tags = ["blog", "responsive", "personal"]
 features = ["mathjax", "customizable", "color"]
-min_version = "0.55"
+min_version = "0.83"
 
 # If the theme has a single author
 [author]
-    name = "Zeran Wu"
-    homepage = "https://github.com/monkeyWzr"
+    name = "Slashformotion"
+    homepage = "https://github.com/slashformotion"
 
 # If porting an existing theme
 [original]
-    author = "Pieter Robberechts"
-    homepage = "https://github.com/probberechts"
-    repo = "https://github.com/probberechts/hexo-theme-cactus"
+    author = "呉澤冉"
+    homepage = "https://github.com/monkeyWzr"
+    repo = "https://github.com/monkeyWzr/hugo-theme-cactus"

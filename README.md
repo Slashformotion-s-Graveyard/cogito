@@ -1,27 +1,32 @@
-## Cactus
+![](images/name.png)
+A hackable hugo theme for personal blog. Forked from [cactus](https://github.com/monkeyWzr/hugo-theme-cactus) created by [@monkeyWzr](https://github.com/monkeyWzr).
 
-A hugo theme for personal blog. Fork from hexo theme [cactus](https://github.com/probberechts/hexo-theme-cactus) created by @probberechts.
+[Live demo on github pages](https://slashformotion.github.io/cogito).
 
-[Live demo on github pages](https://www.takuzen.me/hugo-theme-cactus/).
+Some works are still in progress. See the issues to see whats comming. 
 
-Some works are still in progress. See [TODOS](#todos) below.
+## Why this theme ? 
 
+I am not satisfied with original [cactus](https://github.com/monkeyWzr/hugo-theme-cactus) created by [@monkeyWzr](https://github.com/monkeyWzr). Check the original one out, it's may fit your requirements. This is not my case, I prefer to make my own fork.
+
+***Be aware: with time, this theme will differ more and more from the original.***
 ## Install
 
-1. clone cactus to your hugo site's `themes` folder.
+1. Clone cogito to your hugo site's `themes` folder.
 ```
-git clone https://github.com/monkeyWzr/hugo-theme-cactus.git themes/cactus
+git clone https://github.com/slashformotion/cogito themes/cogito
 ```
 
-2. change your theme to cactus in your site config
+2. Change your theme to cogito in your site config
 ```toml
 # config.toml
 
-theme = "cactus"
+theme = "cogito"
 ```
 
 3. config your site. See [Config] or a [complete config sample](exampleSite/config.toml)
 4. test your site
+
 ```
 hugo server
 ```
@@ -183,7 +188,7 @@ Assign your copy right to `.Site.Copyright`. Cactus will append current year to 
 TODO: Customizable copyright year
 
 ```toml
-copyright = "Zeran Wu" # cactus theme will use site title if copyright is not set
+copyright = "Zeran Wu" # cogito theme will use site title if copyright is not set
 ```
 
 ### Comments
@@ -203,12 +208,12 @@ comments: true
 
 The site config is ignored when `comments` option exists in front matter.
 
-The default engine is disqus. **By now only disqus is supported in cactus.** I will add more options sooner or later. See [Comments Alternatives](https://gohugo.io/content-management/comments/#comments-alternatives)
+The default engine is disqus. **By now only disqus is supported in cogito.** I will add more options sooner or later. See [Comments Alternatives](https://gohugo.io/content-management/comments/#comments-alternatives)
 
-Before using disqus, you need to register and get your [disqus shortname](https://help.disqus.com/en/articles/1717111-what-s-a-shortname). Assign your shortname in `.Site.disqusShortname`, or cactus will use `.Site.Title` by default.
+Before using disqus, you need to register and get your [disqus shortname](https://help.disqus.com/en/articles/1717111-what-s-a-shortname). Assign your shortname in `.Site.disqusShortname`, or cogito will use `.Site.Title` by default.
 
 ```
-disqusShortname = "wzr" # cactus will use site title if not set
+disqusShortname = "wzr" # cogito will use site title if not set
 ```
 
 ### highlight
@@ -233,7 +238,7 @@ default config:
 
 ### Analytics
 
-Cactus uses hugo's bulit in analytics templates. Check [hugo's documents](https://gohugo.io/templates/internal#google-analytics) for details.
+Cactus uses hugo's built in analytics templates. Check [the official Hugo docs](https://gohugo.io/templates/internal#google-analytics) for details.
 
 Set you tracking id in your site config.
 ```toml
@@ -245,6 +250,32 @@ If you are using Google Analytics v3 (analytics.js), you can switch to asynchron
 [params]
 googleAnalyticsAsync = true # not required
 ```
+
+### Related content
+
+Cactus supports hugo's automatic related content. You can enable it in your site config:
+
+```toml
+[related]
+  includeNewer = true
+  threshold = 10
+  toLower = true
+  [[related.indices]]
+    name = "keywords"
+    weight = 80
+  [[related.indices]]
+    name = "title"
+    weight = 80
+  [[related.indices]]
+    name = "tags"
+    weight = 100
+  [[related.indices]]
+    name = "date"
+    weight = 60
+	pattern = "2006"
+```
+
+Please also check [Related Content](https://gohugo.io/content-management/related/) & [Better Relationships in Hugo with Hugo's Related Content](https://www.regisphilibert.com/blog/2018/04/hugo-optmized-relashionships-with-related-content/).
 
 ### RSS
 
@@ -282,18 +313,13 @@ Pagination on posts archive can be disabled to show all posts in chronological o
   showAllPostsArchive = true # or false (default)
 ```
 
-## TODOS
-
-- [ ] More comments engines
-- [x] RSS
-- [ ] I18n
-- [x] Analytics
-- [ ] Local Search
-- [ ] toc template
-- [ ] Customizable copyright year
-- [ ] gallery
-- [ ] expose [mathjax configuration](https://docs.mathjax.org/en/latest/web/configuration.html#web-configuration) 
-
 ## License
 
-MIT
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+

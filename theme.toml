@@ -1,7 +1,7 @@
 name = "cogito"
 license = "MIT"
 licenselink = "https://github.com/slashformotion/cogito/blob/master/LICENSE"
-description = "A hackable hugo theme for personal blog. Forked from cactus]created by @monkeyWzr."
+description = "A hackable hugo theme for personal blog. Forked from cactus created by @monkeyWzr."
 homepage = "https://github.com/slashformotion/cogito"
 demosite = "https://slashformotion.github.io/cogito/"
 tags = ["blog", "responsive", "personal"]

@@ -299,8 +299,8 @@ Cactus supports mathjax. Just add `mathjax` option in your site config:
 ```
 
 You can also enable/disable mathjax per post. In your posts' front matter, add:
-```yaml
-mathjax: true # or false
+```toml
+mathjax = true # or false
 ```
 
 The site config will be ignored when `mathjax` option exists in front matter.
